@@ -15,6 +15,12 @@ Open `index.html` in a browser, or serve the folder:
 python -m http.server 8000
 ```
 
-## Publishing
+## Publishing (GitHub Pages)
 
-Works as-is on GitHub Pages: Settings → Pages → deploy from the `main` branch.
+`.github/workflows/pages.yml` deploys the site every time something is pushed to `main`.
+
+One-time setup: in the repo, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
+
+The site is then live at <https://joey4011.github.io/portfolio/>. You can follow each deploy in the repo's **Actions** tab, or start one by hand there with "Run workflow".
+
+If you add a new top-level file the site needs (for example a favicon), add it to the `cp` line in the workflow as well.
